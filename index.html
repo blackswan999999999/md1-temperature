@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1 id="s1"></h1>
+<h1 id="s2"></h1>
+</body>
+<script>
+    class Tempature {
+        constructor(C) {
+            this.C=C;
+            if (C< -273){
+                this.C= -273;
+            }
+        }
+        convertCtoF(){
+            document.getElementById('s1').innerHTML=`${this.C} độ C có giá trị bằng ${(this.C*9/5)+32} độ F`;
+            return;
+        }
+        convertCtoK(){
+            document.getElementById('s2').innerHTML=`${this.C} độ C có giá trị bằng ${this.C+273} độ K`;
+            return ;
+        }
+    }
+
+    // let userInput =new Tempature(parseFloat(prompt(' Nhập giá trị độ C')))
+    // userInput.convertCtoF();
+    // userInput.convertCtoK();
+    let input =new Tempature(25);
+    input.convertCtoK();
+    input.convertCtoF();
+
+</script>
+</html>
